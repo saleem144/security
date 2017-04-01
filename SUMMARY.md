@@ -11,6 +11,7 @@
     * [PowerShell](powershell.md)
     * [PowerShell Scripting](powershell_scripting2.md)
     * [CMD](cmd.md)
+    * [Privilege Esclation](privilege-esclation.md)
   * [Scripting With Python](scripting_with_python.md)
     * [Python Fundamentals](python_fundamentals.md)
     * [Useful Scripts](connections.md)
