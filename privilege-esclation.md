@@ -26,10 +26,9 @@ saleem
 
 C:\Windows>echo %username%
 Machine
-
 ```
 
-Now we have this basic information we list the other user accounts on the box and view our own user's information in a bit more detail. We can already see that user1 is not part of the localgroup Administrators.
+Now we have this basic information we list the other user accounts on the box and view our own user's information in a bit more detail. We can already see that Machine is part of the localgroup Administrators.
 
 ```
 C:\Windows>net users
