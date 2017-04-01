@@ -159,7 +159,7 @@ Interface: 192.168.15.104 --- 0x11
   255.255.255.255       ff-ff-ff-ff-ff-ff     static
 ```
 
- active network connections and the firewall rules.
+active network connections and the firewall rules.
 
 ```
 C:\Windows\system32> netstat -ano
@@ -180,11 +180,12 @@ C:\Windows\system32> tasklist /SVC
 
 C:\Windows\system32> net start
 
+# This can be useful sometimes as some 3rd party drivers, even by reputable companies, contain more holes
+than Swiss cheese. This is only possible because ring0 exploitation lies outside most peoples expertise.
 
+C:\Windows\system32> DRIVERQUERY
 
 ```
-
-
 
 
 
