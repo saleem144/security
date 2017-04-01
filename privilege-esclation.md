@@ -8,7 +8,7 @@
 
 \(4\) build reviews to often end up being --&gt; authenticated nessus scan, microsoft security baseline analyser
 
-#### OS -&gt; User -&gt;Permission-&gt;
+#### OS -&gt; User -&gt;Permission-&gt;Network Interfaces-&gt;scheduled tasks-&gt;
 
 #### 
 
@@ -75,8 +75,6 @@ The command completed successfully.
 
 We got to know about users and permissions  . next we need to know abt networking , wht is the machine connected to and what rules does it impose on those connections.
 
-
-
 Network interfaces:
 
 ```
@@ -98,8 +96,8 @@ Ethernet adapter Ethernet:
    Physical Address. . . . . . . . . : 68-F7-28-A0-14-24
    DHCP Enabled. . . . . . . . . . . : Yes
    Autoconfiguration Enabled . . . . : Yes
-   
-   
+
+
 Wireless LAN adapter Wi-Fi:
 
    Connection-specific DNS Suffix  . :
@@ -159,6 +157,31 @@ Interface: 192.168.15.104 --- 0x11
   224.0.0.252           01-00-5e-00-00-fc     static
   239.255.255.250       01-00-5e-7f-ff-fa     static
   255.255.255.255       ff-ff-ff-ff-ff-ff     static
+```
+
+ active network connections and the firewall rules.
+
+```
+C:\Windows\system32> netstat -ano
+C:\Windows\system32> netsh firewall show state
+C:\Windows\system32> netsh firewall show config
+```
+
+Finally we will take a brief look at the what is running on the compromised box: scheduled tasks, running processes, started services and installed drivers.
+
+```
+C:\Windows\system32> schtasks /query /fo LIST /v
+
+# The following command links running processes to started services.
+
+C:\Windows\system32> tasklist /SVC
+
+#These Windows services are started
+
+C:\Windows\system32> net start
+
+
+
 ```
 
 
