@@ -6,7 +6,9 @@ Or, maybe the way to compromise the machine is really complicated or noisy and y
 
 ## Create a new user
 
-The most obvious, but not so subtle way is to just create a new user (if you are root, or someone with that privilege) .
+The most obvious, but not so subtle way is to just create a new user \(if you are root, or someone with that privilege\) .
+
+we can use adduser to add a user account. Ideally we should also add our new user to the sudoers group so we have root privileges.
 
 ```
 adduser pelle
@@ -71,15 +73,13 @@ crontab -e
 */10 * * * * pelle /path/to/binary
 ```
 
-
-More here: http://kaoticcreations.blogspot.cl/2012/07/backdooring-unix-system-via-cron.html
-
+More here: [http://kaoticcreations.blogspot.cl/2012/07/backdooring-unix-system-via-cron.html](http://kaoticcreations.blogspot.cl/2012/07/backdooring-unix-system-via-cron.html)
 
 ## Metasploit persistence module
 
 Create a binary with malicious content inside. Run that, get meterpreter shell, run metasploit persistence.
 
-https://www.offensive-security.com/metasploit-unleashed/binary-linux-trojan/
+[https://www.offensive-security.com/metasploit-unleashed/binary-linux-trojan/](https://www.offensive-security.com/metasploit-unleashed/binary-linux-trojan/)
 
 If you have a meterpreter shell you can easily just run `persistence`.
 
@@ -99,16 +99,15 @@ Mysql backdoor
 
 ## Hide backdoor in bootblock
 
-
 ## Nmap
 
 If the machine has nmap installed:
 
-https://gist.github.com/dergachev/7916152
+[https://gist.github.com/dergachev/7916152](https://gist.github.com/dergachev/7916152)
 
 ## Setuid on text-editor
 
-You can setuid on an editor. So if you can easily enter as a www-data, you can easily escalate to root through the editor. 
+You can setuid on an editor. So if you can easily enter as a www-data, you can easily escalate to root through the editor.
 
 With `vi` it is extremely easy. You just run `:shell`, and it gives you a shell.
 
@@ -122,15 +121,9 @@ chmod u+s myBinary
 
 ## References
 
+Read this  
+[https://gist.github.com/dergachev/7916152](https://gist.github.com/dergachev/7916152)
 
-Read this
-https://gist.github.com/dergachev/7916152
-
-This is a creat introduction
-http://www.dankalia.com/tutor/01005/0100501002.htm
-
-
-
-
-
+This is a creat introduction  
+[http://www.dankalia.com/tutor/01005/0100501002.htm](http://www.dankalia.com/tutor/01005/0100501002.htm)
 
