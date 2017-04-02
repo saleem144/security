@@ -14,7 +14,11 @@ C:\Documents and Settings\Desktop> net user james password /add
 C:\Documents and Settings\Desktop> net localgroup Administrators james /add
 ```
 
-  3. If your client has a Windows domain, you can add users to the domain and add them to domain groups \(if u have sufficient privileges\)
+   3. If your client has a Windows domain, you can add users to the domain and add them to domain groups \(if u have sufficient privileges\)
+
+```
+
+```
 
 
 
