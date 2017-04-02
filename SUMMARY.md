@@ -80,6 +80,7 @@
     * [Loot Windows](loot_windows_-_for_credentials_and_other_stuff.md)
     * [Loot Linux](tcp-dumps_on_pwnd_machines.md)
   * [Persistence](persistence.md)
+    * [windows](persistence/windows.md)
   * [Cover your tracks](clean_up.md)
 * [Password Cracking](password-cracking.md)
   * [Generate Custom Wordlist](generate_custom_wordlist.md)
