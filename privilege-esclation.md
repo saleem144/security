@@ -184,7 +184,6 @@ C:\Windows\system32> net start
 than Swiss cheese. This is only possible because ring0 exploitation lies outside most peoples expertise.
 
 C:\Windows\system32> DRIVERQUERY
-
 ```
 
 

@@ -86,6 +86,7 @@
   * [Offline Password Cracking](identify_hash_and_crack_it.md)
   * [Online Password Cracking](online_password_cracking.md)
   * [Pass the Hash - Reusing Hashes](pass_the_hash_-_reusing_hashes.md)
+  * [Dumping Plaintext Passwords from Memory with Windows Credential Editor](dumping-plaintext-passwords-from-memory-with-windows-credential-editor.md)
 * [Pivoting - Port forwarding - Tunneling](port_forwarding_and_tunneling.md)
 * [Network traffic analysis](network_traffic.md)
   * [Arp-spoofing](arp-spoofing.md)
