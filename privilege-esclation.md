@@ -6,9 +6,9 @@
 
 \(3\) meterpreter makes you lazy \(getsystem = lazy-fu\),
 
-\(4\) build reviews to often end up being --&gt; authenticated nessus scan, microsoft security baseline analyser
+\(4\) build reviews to often end up being --&gt; authenticated nessus scan, microsoft security baseline. analyser
 
-#### OS -&gt; User -&gt;Permission-&gt;Network Interfaces-&gt;scheduled tasks-&gt;
+#### OS -&gt; User -&gt;Permission-&gt;Network Interfaces-&gt;scheduled tasks-&gt;Patch Info-&gt;
 
 #### 
 
@@ -184,8 +184,13 @@ C:\Windows\system32> net start
 than Swiss cheese. This is only possible because ring0 exploitation lies outside most peoples expertise.
 
 C:\Windows\system32> DRIVERQUERY
-
 ```
+
+Before continuing on you should take a moment to review the information that you have gathered so far as there should be quite a bit by now. The next step in our gameplan is to look for some quick security fails which can be easily leveraged to upgrade our user privileges.
+
+The first and foremost this we need t look at is patch level .
+
+The best strategy is to look for privilege escalation exploits and look up their respective KB patch numbers.
 
 
 
