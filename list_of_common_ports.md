@@ -261,7 +261,7 @@ rpcbind -p 192.168.1.101
 
 ## Port 119 - NNTP
 
-Network time protocol.   
+Network time protocol.  
 It is used synchronize time. If a machine is running this server it might work as a server for synchronizing time. So other machines query this machine for the exact time.
 
 An attacker could use this to change the time. Which might cause denial of service and all around havoc.
@@ -492,7 +492,7 @@ There are a few snmp modules in metasploit that you can use. snmp\_enum can show
 ## Port 389/636 - Ldap
 
 Lightweight Directory Access Protocol.  
-This port is usually used for Directories. Directory her means more like a telephone-directory rather than a folder. Ldap directory can be understood a bit like the windows registry. A database-tree. Ldap is sometimes used to store usersinformation.   
+This port is usually used for Directories. Directory her means more like a telephone-directory rather than a folder. Ldap directory can be understood a bit like the windows registry. A database-tree. Ldap is sometimes used to store usersinformation.  
 Ldap is used more often in corporate structure.  
 Webapplications can use ldap for authentication. If that is the case it is possible to perform **ldap-injections** which are similar to sqlinjections.
 
@@ -568,7 +568,7 @@ If Postfix is run on it it could be vunerable to shellshock
 
 ## Port 631 - Cups
 
-Common UNIX Printing System has become the standard for sharing printers on a linux-network.   
+Common UNIX Printing System has become the standard for sharing printers on a linux-network.  
 You will often see port 631 open in your priv-esc enumeration when you run `netstat`. You can log in to it here: [http://localhost:631/admin](http://localhost:631/admin)
 
 You authenticate with the OS-users.
@@ -584,10 +584,10 @@ The default port for the Imap-protocol.
 ## Port 995 - POP3 Encrypten
 
 Port 995 is the default port for the **Post Office Protocol**.  
-The protocol is used for clients to connect to the server and download their emails locally.   
+The protocol is used for clients to connect to the server and download their emails locally.  
 You usually see this port open on mx-servers. Servers that are meant to send and recieve email.
 
-Related ports:   
+Related ports:  
 110 is the POP3 non-encrypted.
 
 25, 465
@@ -682,9 +682,9 @@ This can be used to escalate privileges if it is not correct configured. Check c
 There are some exploits for this, so check it out. You can use the default Oracle users to access to it. You can use the normal ftp protocol to access it.
 
 Can be accessed through ftp.  
-Some default passwords here:   
+Some default passwords here:  
 [https://docs.oracle.com/cd/B10501\_01/win.920/a95490/username.htm](https://docs.oracle.com/cd/B10501_01/win.920/a95490/username.htm)  
-Name:   
+Name:  
 Version:
 
 Default logins:  
@@ -871,7 +871,7 @@ Since this port is used by many different services. They are divided like this.
 
 Tomcat suffers from default passwords. There is even a module in metasploit that enumerates common tomcat passwords. And another module for exploiting it and giving you a shell.
 
-## Port 9389 
+## Port 9389
 
 > Active Directory Administrative Center is installed by default on Windows Server 2008 R2 and is available on Windows 7 when you install the Remote Server Administration Tools \(RSAT\).
 
