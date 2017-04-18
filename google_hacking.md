@@ -5,13 +5,9 @@ Search engines can be very useful for finding information about the target. Sear
 * Finding sensitive information on the domain that you are attacking
 * Finding sensitive information about the company and its employees in on other parts of the internet. Like forums, newsgroups etc.
 
-
-
 Remember that the world is bigger than google. So test out the other search engines.
 
 Baidu, binsearch.info, Bing, DuckDuckGo, ixquick/Startpage, Shodan,PunkSpider
-
-
 
 Google is a good tool to learn more about a website.
 
@@ -32,6 +28,12 @@ site:example.com myword
 ```
 inurl:test.com
 ```
+
+```
+intitle:"VNC viewer for JAVA"
+```
+
+### 
 
 ### Wild cards
 
