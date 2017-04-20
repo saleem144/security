@@ -96,7 +96,16 @@ This is the essential part of the configuration file, this is where we create th
 
 So the bind-address is where the proxy receieves the connection, and the connectaddress is the machine it forwards the connection to.
 
-Example 2:
+**Example 2:**
+
+
+
+Windows machine  \(Internal\) -------&gt; Linux Machine \(Proxy machine-public IP\) ------&gt;  Windows Machine \(Remote\)
+
+```
+  RDP - 208.88.127.99:80             208.88.127.99                   67.23.72.109:3389
+  
+```
 
 Internal PC \(Engree port 80 and 443\)
 
@@ -112,11 +121,7 @@ Bindaddress    Bindport    ConnectAddress    Connectport
 /etc/init.d/rinetd start
 ```
 
-Windows machine  \(Internal\) -------&gt; Linux Machine \(Proxy machine-public IP\) ------&gt;  Windows Machine \(Remote\)
 
-```
-  RDP - 208.88.127.99:80             208.88.127.99                   67.23.72.109:3389
-```
 
 ## ------------------
 
