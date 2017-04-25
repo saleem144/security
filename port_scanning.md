@@ -32,21 +32,22 @@ Now that you have gathered some IP addresses from your subdomain scanning it is 
 
 ### Basics - tcp-connect scan
 
-Okay, so a bit of the basics of Nmap and how it works. When one machine initiate a connection with another machine using the **transmission-control protocol (tcp)** it performs what is know as a three-way handshake. That means:
+Okay, so a bit of the basics of Nmap and how it works. When one machine initiate a connection with another machine using the **transmission-control protocol \(tcp\)** it performs what is know as a three-way handshake. That means:
+
 ```
 machine1 sends a syn packet to machine2
 machine2 send a syn-ack packet to machine1
 machine1 sends a ack packet to machine2.
 ```
 
-If machine2 responds with a syn-ack we know that that port is open. This is basically what nmap does when it scans for a port.
-If machine1 omits the last ack packet the connection is not made. This can be a way to make less noise. 
+If machine2 responds with a syn-ack we know that that port is open. This is basically what nmap does when it scans for a port.  
+If machine1 omits the last ack packet the connection is not made. This can be a way to make less noise.
 
 This is the default mode for nmap. If you do not add any flags and scan a machine this is the type of connection it creates.
 
 ### "Stealthy" -sS
 
-By adding the `-sS` flag we are telling nmap to not finalize the three way handshake. It will send a `syn`, receive `syn-ack` (if the port is open), and then terminate the connection. This used to be considered stealthy before, since it was often not logged. However it should not be considered stealthy anymore.
+By adding the `-sS` flag we are telling nmap to not finalize the three way handshake. It will send a `syn`, receive `syn-ack` \(if the port is open\), and then terminate the connection. This used to be considered stealthy before, since it was often not logged. However it should not be considered stealthy anymore.
 
 In the flag I imagine that the first `s` stands for scan/scantype and the second `S` stands for `syn`.
 
@@ -54,12 +55,11 @@ So `-sS` can be read as **scantype syn**
 
 ### UDP scan
 
-UDP is after TCP the most common protocol. DNS (53), SNMP (161/162) and DHCP (67/68) are some common ones. Scanning for it is slow and unreliable.
+UDP is after TCP the most common protocol. DNS \(53\), SNMP \(161/162\) and DHCP \(67/68\) are some common ones. Scanning for it is slow and unreliable.
 
 ```
 -sU
 ```
-
 
 #### Output scan to a textfile
 
@@ -74,9 +74,7 @@ Not all output works with grepable format. For example NSE does not work with gr
 
 # To xml
 -oX nameOfFile
-
 ```
-
 
 ### Scan an entire IP-range
 
@@ -90,9 +88,8 @@ nmap -vvv -sn 201.210.67.0/24
 
 You can also specify a specific range, like this
 
-```
-nmap -sP 201.210.67.0-100
-````
+    nmap -sP 201.210.67.0-100
+    `
 
 #### Sort out the machines that are up
 
@@ -112,7 +109,6 @@ grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' ip-range.txt > 
 
 Now you can input all those ips to nmap and scan them.
 
-
 #### Scan a range and output if a specific port is open
 
 Nmap has a command to make the output grepable.
@@ -121,10 +117,17 @@ Nmap has a command to make the output grepable.
 nmap -vvv -p 80 201.210.67.0-100 -oG - | grep 80/open
 ```
 
+### Operating System \(Banner Grabbing\)
+
+```
+nmap -A IP 
+```
+
+### 
+
 ### Nmap scripts
 
-This chapter could also be placed in Vulnerability-analysis and Exploitation. Because nmap scripting is a really versatile tool that can do many things. Here we will focus on it's ability to retrieve information that can be useful in the process to **find vulnerabilities** 
-
+This chapter could also be placed in Vulnerability-analysis and Exploitation. Because nmap scripting is a really versatile tool that can do many things. Here we will focus on it's ability to retrieve information that can be useful in the process to **find vulnerabilities**
 
 First locate the nmap scripts. Nmap scripts end in `.nse`. For Nmap script engine.
 
@@ -137,7 +140,6 @@ The syntax for running a script is:
 ```
 nmap --script scriptname 192.168.1.101
 ```
-
 
 To find the "man"-pages, the info about a script we write:
 
@@ -159,21 +161,26 @@ Run the default scripts
 nmap -sC example.com
 ```
 
+SMB
+
+
+
+## 
 
 ## Metasploit
 
-We can do port-scanning with metasploit and nmap. And we can even integrate nmap into metasploit. This might be a good way to keep your process neat and organized. 
+We can do port-scanning with metasploit and nmap. And we can even integrate nmap into metasploit. This might be a good way to keep your process neat and organized.
 
-### db_nmap
+### db\_nmap
 
-You can run `db_nmap` and all the output will be stored in the metasploit database and available with 
+You can run `db_nmap` and all the output will be stored in the metasploit database and available with
 
 ```
 hosts
 services
 ```
 
-You can also import nmap scans. But you must first output it in xml-format with the following flag  
+You can also import nmap scans. But you must first output it in xml-format with the following flag
 
 ```
 nmap 192.168.1.107 -oX result.xml
@@ -185,7 +192,7 @@ Good practice would be to output the scan-results in xml, grepable and normal fo
 nmap 192.168.1.107 -oA result
 ```
 
-Then you can load it into the database with the following command. 
+Then you can load it into the database with the following command.
 
 ```
 db_import /path/to/file.xml
@@ -198,4 +205,6 @@ If you for some reason don't have access to nmap you can run metasploits modules
 ```
 use auxiliary/scanner/portscan/
 ```
+
+
 

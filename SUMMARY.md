@@ -32,6 +32,8 @@
     * [Identifying Technology Stack](identifying-technology-stack.md)
   * [Active Information Gathering](active_information_gathering.md)
     * [Port Scanning](port_scanning.md)
+    * [SMB,SMTP, SNMP Enumeration](smb-snmp-enumeration.md)
+      * [SMTP & SNMP Enumeration](smb-snmp-enumeration/smtp-enumeration.md)
 * [Vulnerability analysis](vulnerability_analysi1s.md)
   * [Server-side Vulnerabilities](server-side-vulnerabilities.md)
     * [Common ports\/services and how to use them](list_of_common_ports.md)
