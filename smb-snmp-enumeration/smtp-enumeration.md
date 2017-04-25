@@ -48,5 +48,5 @@ snmpwalk -c public -v1 192.168.31.227 1.3.6.1.2.1.25.4.2.1.2
 snmpwalk -c public -v1 192.168.31.227 1.3.6.1.2.1.6.13.1.3
 ```
 
-
+tools  -- snmpenum and snmpcheck -- capable of extracting info 
 
