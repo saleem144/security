@@ -4,8 +4,6 @@ Under certain misconfiguration , we can gather info abt the host and networks
 
 SMTP verbs: VRFY \(Verify user\)                --- can be absued by attacker
 
-
-
 ```
 Connect to host having mail server 
 
@@ -26,12 +24,24 @@ Susceptible to IP spoofing and replay attacks
 **SNMP MIB \(SNMP Management Information base\)**
 
 ```
-nmap -sU --open -p 161 192.168.31.200-254 --open 
+nmap -sU --open -p 161 192.168.31.200-254 --open
 ```
 
 ```
 onesixtyone -c community -i ips
 ```
 
-Prob and query using SNMPWALK 
+Prob and query using SNMPWALK
+
+```
+snmpwalk -c public -v1 192.168.31.227
+```
+
+So much of information
+
+```
+snmpwalk -c public -v1 192.168.31.227 1.3.6.1.2.1.25.4.2.1.2
+```
+
+
 
