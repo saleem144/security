@@ -79,8 +79,6 @@ rinetd.conf
 
 scenario1:
 
-
-
 Encrypted tunnel within the ssh tunnel:
 
 **SSH Local Port forwarding \(-L\):**
@@ -89,7 +87,7 @@ localport --&gt; remoteport \(Over ssh tunnel\)
 
 **SSH Remote Port forwarding :**
 
-Scenario2\(tunnel a remote port to a local server\):
+Scenario2 \(tunnel a remote port to a local server\):
 
 Initiated Client Attack \(on org\) and got shell of a internal machine \(Non routable\) -- &gt; uploaded a SSH windows client \(plink\) on vi
 
@@ -112,6 +110,8 @@ Now in attacker machine try to tunnel the local traffic to rdp
 ```
 rdesktop 127.0.0.1:3390
 ```
+
+**SSH Dynamic Port Forwarding:**
 
 
 
