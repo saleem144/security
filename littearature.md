@@ -4,9 +4,9 @@
 
 ### **Starting Of With OSCP :**
 
+[https://www.cybrary.it/0p3n/prep-guide-offsecs-pwkoscp/](https://www.cybrary.it/0p3n/prep-guide-offsecs-pwkoscp/)
+
 [https://tulpa-security.com/2016/09/19/prep-guide-for-offsecs-pwk/](https://tulpa-security.com/2016/09/19/prep-guide-for-offsecs-pwk/)
-
-
 
 ---
 
@@ -31,8 +31,6 @@
 **Hacking - The Art of Exploitation**
 
 **Pentesting - A Hands-On Introduction to Hacking by Georgia Weidman**
-
-
 
 ---
 
