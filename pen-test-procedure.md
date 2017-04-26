@@ -7,7 +7,8 @@ Start with Information & enumeration
   * Explore the web application.
   * Search for vulnerabilities in the known services & application
   * Brute force SSH with common & weak credentials.
-    ---
+
+---
 
 Host Discovery
 
