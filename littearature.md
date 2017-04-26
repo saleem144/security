@@ -6,6 +6,10 @@
 
 [https://tulpa-security.com/2016/09/19/prep-guide-for-offsecs-pwk/](https://tulpa-security.com/2016/09/19/prep-guide-for-offsecs-pwk/)
 
+
+
+---
+
 ## Zines
 
 **2600: The Hacker Quarterly**
@@ -20,11 +24,9 @@
 
 [https://archive.org/stream/HackingWithKali/Hacking with Kali\_djvu.txt](https://archive.org/stream/HackingWithKali/Hacking with Kali_djvu.txt)
 
-
-
 ---
 
-## Books
+## Books:
 
 **Hacking - The Art of Exploitation**
 
@@ -32,9 +34,9 @@
 
 
 
-References for Code :
+---
+
+### References for Code :
 
 [https://github.com/hfiref0x](https://github.com/hfiref0x)
-
-
 
