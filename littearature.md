@@ -8,6 +8,8 @@
 
 [https://tulpa-security.com/2016/09/19/prep-guide-for-offsecs-pwk/](https://tulpa-security.com/2016/09/19/prep-guide-for-offsecs-pwk/)
 
+[https://jivoi.github.io/2015/06/19/oscp-prepare/](https://jivoi.github.io/2015/06/19/oscp-prepare/)
+
 ---
 
 ## Zines
