@@ -16,6 +16,16 @@ Lab Machines \(Hints\) :
 
 ---
 
+[https://jivoi.github.io/2015/07/01/pentest-tips-and-tricks/](https://jivoi.github.io/2015/07/01/pentest-tips-and-tricks/)
+
+[http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet](http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
+
+[http://www.computersecurity.org/computer-cyber-security-certifications-education-college-courses/cheat-sheet-how-to-pass-the-oscp-offensive-security-certified-professional-exam-step-by-step-guide-sqli-xss-web-app-attacks-part-5/](http://www.computersecurity.org/computer-cyber-security-certifications-education-college-courses/cheat-sheet-how-to-pass-the-oscp-offensive-security-certified-professional-exam-step-by-step-guide-sqli-xss-web-app-attacks-part-5/)
+
+## 
+
+---
+
 ## Zines
 
 **2600: The Hacker Quarterly**
@@ -43,4 +53,8 @@ Lab Machines \(Hints\) :
 ### References for Code :
 
 [https://github.com/hfiref0x](https://github.com/hfiref0x)
+
+
+
+
 
