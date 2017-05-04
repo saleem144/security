@@ -10,6 +10,10 @@
 
 [https://jivoi.github.io/2015/06/19/oscp-prepare/](https://jivoi.github.io/2015/06/19/oscp-prepare/)
 
+Lab Machines \(Hints\) :
+
+[https://forums.offensive-security.com/showthread.php?t=3506](https://forums.offensive-security.com/showthread.php?t=3506)
+
 ---
 
 ## Zines
