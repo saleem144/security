@@ -104,6 +104,7 @@
   * [WPS](wps.md)
 * [Physical access to machine](physical_access_to_machine.md)
 * [Literature](littearature.md)
+  * [References](littearature/references.md)
 * [scribble--random](scribble-random.md)
 * [pen-test-procedure](pen-test-procedure.md)
 
