@@ -10,6 +10,8 @@
 
 [https://jivoi.github.io/2015/06/19/oscp-prepare/](https://jivoi.github.io/2015/06/19/oscp-prepare/)
 
+[http://hackingandsecurity.blogspot.qa/2016/04/oscp-related-notes.html](http://hackingandsecurity.blogspot.qa/2016/04/oscp-related-notes.html)
+
 Lab Machines \(Hints\) :
 
 [https://forums.offensive-security.com/showthread.php?t=3506](https://forums.offensive-security.com/showthread.php?t=3506)
@@ -53,8 +55,4 @@ Lab Machines \(Hints\) :
 ### References for Code :
 
 [https://github.com/hfiref0x](https://github.com/hfiref0x)
-
-
-
-
 
