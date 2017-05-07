@@ -98,13 +98,10 @@ So the bind-address is where the proxy receieves the connection, and the connect
 
 **Example 2:**
 
-
-
 Windows machine  \(Internal\) -------&gt; Linux Machine \(Proxy machine-public IP\) ------&gt;  Windows Machine \(Remote\)
 
 ```
   RDP - 208.88.127.99:80             208.88.127.99                   67.23.72.109:3389
-  
 ```
 
 Internal PC \(Engree port 80 and 443\)
@@ -120,8 +117,6 @@ Bindaddress    Bindport    ConnectAddress    Connectport
 
 /etc/init.d/rinetd start
 ```
-
-
 
 ## ------------------
 
@@ -241,10 +236,10 @@ But we are not done yet. It still says that we have **WebRTC leaks**. In order t
 
 ## SShuttle
 
-I haven't used this, but it might work.
+sshuttle is an awesome tunneling tool that does all the hard work for you. It gets rid of the need for proxy chains. What this command does is tunnels traffic through 10.0.0.1 and makes a route for all traffic destined for 10.10.10.0/24 through your sshuttle tunnel.
 
 ```
-sshuttle -r root@192.168.1.101 192.168.1.0/24
+sshuttle -r root@10.0.0.1 10.10.10.0/24
 ```
 
 ## Port forward with metasploit
