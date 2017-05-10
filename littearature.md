@@ -10,6 +10,8 @@
 
 [https://jivoi.github.io/2015/06/19/oscp-prepare/](https://jivoi.github.io/2015/06/19/oscp-prepare/)
 
+[https://theslickgeek.com/oscp/](https://theslickgeek.com/oscp/)
+
 [http://hackingandsecurity.blogspot.qa/2016/04/oscp-related-notes.html](http://hackingandsecurity.blogspot.qa/2016/04/oscp-related-notes.html)
 
 Lab Machines \(Hints\) :
