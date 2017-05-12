@@ -74,6 +74,7 @@
   * [Metasploit-Basics](metasploit-basics.md)
   * [Metasploit-basic-2](metasploit-basic-2.md)
   * [Using Public Exploits](using-public-exploits.md)
+  * [Buffer Overflow](buffer-overflow.md)
 * [Post Exploitation](post_exploitation.md)
   * [Spawning Shells](spawning_shells.md)
   * [Meterpreter for Post-Exploitation](getting_meterpreter_shell.md)
