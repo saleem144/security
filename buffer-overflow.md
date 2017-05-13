@@ -40,7 +40,7 @@ An unexpected crash indicates that the application might not filter certain inpu
 
    3. Buffer = A + B + bad characters
 
-   4. run and check whether any issue wt 
+   4. run and check whether any issue wt
 
 5. Redirecting Execution flow :
 
@@ -50,15 +50,16 @@ An unexpected crash indicates that the application might not filter certain inpu
 
    3. We figured wht characters are allowed in the buffer
 
-   4. Now to redirect the execution to shellcode at the time of the crash 
+   4. Now to redirect the execution to shellcode at the time of the crash
 
    5. to get tht we need to get the address of the ESP instead of B's to EIP.
 
    6. We need to find more generic way to find the ESP Address at the time of crash
 
-   7. Application at run time loads certain libraries , dlls , drivers etc we can look at those to find the Jmp ESP
+   7. Application at run time loads certain libraries , dlls , drivers etc we can look at those to find instruction like \( Jmp ESP \)
 
 6. Mona
+
 7. Shell Execution
 
 
