@@ -11,8 +11,6 @@ Fuzzing involves sending malformed data into application input and watching for
 
 An unexpected crash indicates that the application might not filter certain input correctly. This could lead to discovering an exploitable vulnerability
 
-
-
 buffer = A\*2606 + &lt;Bufffer Overflow / EIP Address&gt; + shell code + "C" \* \(3500 -2606 -4 -351\)
 
 **Steps:**
