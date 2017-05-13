@@ -58,9 +58,25 @@ An unexpected crash indicates that the application might not filter certain inpu
 
    7. Application at run time loads certain libraries , dlls , drivers etc we can look at those to find instruction like \( Jmp ESP \)
 
-6. Mona
+6. Mona \( third party debugger \)
 
-7. Shell Execution
+   1. !mona modules
+
+   2. choose module : no Memory protection \(DEP, ASLR\) , no bad characters
+
+   3. nasm\_shell script -- prints the opcode of any instruction
+
+   4. mona module can search for any opcode in given memory range
+
+   5. !mona find -s "\xff\xe4" -m slmfc.dll   --- &gt; given address has this instruction
+
+   6. now we can use this address to make EIP point to ESP at runtime
+
+   7. modify in skeleton exploit , replace B's with the obtained address and set the breakpoint \(F2\) in debugger also run regular by F7
+
+7. Shellcode payload generator
+
+   1. msfvenom
 
 
 
