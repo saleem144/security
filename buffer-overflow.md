@@ -29,16 +29,37 @@ An unexpected crash indicates that the application might not filter certain inpu
    6. Control the execution flow of the application , by changing the specific \(EIP\) Bytes
 3. ShellCode \(User entered code\)
    1. once the shellcode is in memory we can redirect the execution of the application to this shell code
-   2.  we need to increase the size of the buffer in order to accommodate the shellcode \(3500\)
+   2. we need to increase the size of the buffer in order to accommodate the shellcode \(3500\)
+   3. ESP would be the best address to insert the shellcode , as it is easy to access the address
+   4. Shellcode payload generator : 
 4. Bad Character
 
    1. certain character are considered bad , should not be used in the buffer , return address, shellcode  ex: NOP, \r etc
 
-   2. 
+   2. add all combinations of HEX character combinations to buffer
 
-1. Redirecting Execution
-2. Mona
-3. Shell Execution
+   3. Buffer = A + B + bad characters
+
+   4. run and check whether any issue wt 
+
+5. Redirecting Execution flow :
+
+   1. we found the location for our shellcode in the memory location tht is easily accessible by ESP Register
+
+   2. we Control the EIP Register
+
+   3. We figured wht characters are allowed in the buffer
+
+   4. Now to redirect the execution to shellcode at the time of the crash 
+
+   5. to get tht we need to get the address of the ESP instead of B's to EIP.
+
+   6. We need to find more generic way to find the ESP Address at the time of crash
+
+   7. Application at run time loads certain libraries , dlls , drivers etc we can look at those to find the Jmp ESP
+
+6. Mona
+7. Shell Execution
 
 
 
