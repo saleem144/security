@@ -3,10 +3,10 @@
 Scan for smb port in IP range
 
 ```
-nmap -p 139,445 192.168.31.200-254 --open 
+nmap -p 139,445 192.168.31.200-254 --open
 ```
 
-specific tools to  identify SMB , NETBIOS 
+specific tools to  identify SMB , NETBIOS
 
 ```
 nbtscan 192.168.31.200-254
@@ -50,7 +50,7 @@ check for the smb related scripts in nmap nse directory noe try to use the speci
 nmap -p 139,445 --script smb-enum-users 192.168.31.206
 ```
 
-enumerate the users 
+enumerate the users
 
 check for major vulnerabilities \(Exploits\) in SMB service
 
