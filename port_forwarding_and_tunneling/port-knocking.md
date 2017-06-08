@@ -1,6 +1,4 @@
 **Port knocking**
 
-Is a stealth method to externally open **ports **that, by default, the firewall keeps closed. It works by requiring connection attempts to a series of predefined closed **ports**
-
-
+Port knocking is a technique used to protect network services which must be accessible from the public Internet but are not intended for public use. It works by blocking access to the service unless the client first ‘knocks’ by sending a short sequence of packets to a particular set of ports in a particular order. The content of the packets is unimportant.
 
