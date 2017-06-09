@@ -58,3 +58,17 @@ Lab Machines \(Hints\) :
 
 [https://github.com/hfiref0x](https://github.com/hfiref0x)
 
+
+
+Privleage esclation linux:
+
+
+
+[http://repository.root-me.org/Administration/Unix/EN%20-%20sudo%20:%20you're%20doing%20it%20wrong.pdf](http://repository.root-me.org/Administration/Unix/EN%20-%20sudo%20:%20you're%20doing%20it%20wrong.pdf)
+
+[http://repository.root-me.org/Administration/Unix/EN%20-%20SUID%20Privileged%20Programs.pdf](http://repository.root-me.org/Administration/Unix/EN%20-%20SUID%20Privileged%20Programs.pdf)
+
+[http://repository.root-me.org/Administration/Unix/EN%20-%20Dangers%20of%20SUID%20Shell%20Scripts.pdf](http://repository.root-me.org/Administration/Unix/EN%20-%20Dangers%20of%20SUID%20Shell%20Scripts.pdf)
+
+
+
