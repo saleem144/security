@@ -113,11 +113,7 @@ rdesktop 127.0.0.1:3390
 
 **SSH Dynamic Port Forwarding:**
 
-
-
-
-
------------------------------------------------------------------------------------------
+---
 
 Port Forwarding is a way to forward or “tunnel” TCP traffic through SSH from one machine to another. Using just one line of code, you can create an outgoing tunnel, forward your IP requests over that tunnel, and receive the response. In this way you can **pull **the data from a remote server to a **local**server \(local port forwarding\), and your local machine acts as a proxy server for the remote one. Or you can create an incoming tunnel to a remote server which receives IP requests, forwards them over that tunnel to the local server where it is processed and sent back again. Thus it is possible to **push**data from a local server to/through a**remote**server \(remote port forwarding\).
 
@@ -140,8 +136,6 @@ Remote Port Forwarding \(Incoming Tunnel\):
   `ssh -R remote_port:local_host:local_port login@servername`
 * Tunnel: remote host -\(SSH tunnel\)→ local host -\(SSH tunnel\)→ remote host
 * Example: make localhost visible in the internet or giving access to a service on your home machine to people at work
-
-
 
 
 
