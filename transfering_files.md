@@ -111,14 +111,14 @@ ssh-keygen -t rsa -C "your_email@example.com"
 then you enter a name for the key.
 
 Enter file in which to save the key \(/root/.ssh/id\_rsa\): nameOfMyKey  
-Enter passphrase \(empty for no passphrase\):   
+Enter passphrase \(empty for no passphrase\):  
 Enter same passphrase again:
 
 This will create two files, one called `nameOfMyKey` and another called `nameOfMyKey_pub`. The one with the `_pub` is of course your public key. And the other key is your private.
 
 1. Add your public key to authorized\_keys.
 
-Now you copy the content of `nameOfMyKey_pub`.   
+Now you copy the content of `nameOfMyKey_pub`.  
 On the compromised machine you go to `~/.ssh` and then run add the public key to the file authorized\_keys. Like this
 
 ```bash
