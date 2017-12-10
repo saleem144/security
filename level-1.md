@@ -8,9 +8,10 @@
    is for maintaining data _confidentiality_  
    and requires the use of a key \(kept secret\) in order to return to plaintext.
 
-* **Hashing**
-   is for validating the _integrity_
+* **Hashing**  
+   is for validating the _integrity_  
    of content by detecting all modification thereof via obvious changes to the hash output.
+
 * **Obfuscation**
    is used to _prevent people from understanding_
    the meaning of something, and is often used with computer code to help prevent successful reverse engineering and/or theft of a product’s functionality.
@@ -23,4 +24,14 @@
   Cryptographers like their seasonings. A “pepper” is similar to a salt - a value added to the password before being hashed - but typically placed at the end of the password.
 
 One might ask when obfuscation would be used instead of encryption, and the answer is that obfuscation is used to make it harder for one entity to understand \(like a human\) while still being easy to consume for something else \(like a computer\). With encryption, neither a human or a computer could read the content without a key.
+
+
+
+* **What is the difference between threat, vulnerability, and a risk ?**
+
+A threat is from an attacker that will use vulnerability that was not mitigated because someone forgot to identify it as a risk
+
+
+
+
 
